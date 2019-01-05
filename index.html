@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Ravi Jewellers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:Light|Raleway|Poppins">
+    <link rel="stylesheet" type="text/css" href="./styles/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="./fontawesome/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/index.css" />
+    <script src="./js/carousel.js"></script>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="row">
+            <div class="logo">
+                <h2>Ravi Jewellers</h2>
+            </div>
+            <div class="menu">
+                <p><a href="#">Home</a></p>
+                <p><b><a href="#">Shop</a></b></p>
+                <p><a href="#">Collections</a></p>
+                <p><a href="#">About</a></p>
+                <p><a href="#">Contact</a></p>
+            </div>
+            <div class="options">
+                <i class="fas fa-bars" id="bars" onclick="dropDownMenuControl()"></i>
+                <i class="far fa-user-circle" id="user"></i>
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge">2</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="dropdown animated fast">
+        <a class="nav-links" href="#"><i class="fas fa-home"></i> Home</a>
+        <a class="nav-links" href="#"><i class="fas fa-shopping-bag"></i><b> Shop</b></a>
+        <a class="nav-links" href="#"><i class="fas fa-image"></i> Collections</a>
+        <!-- <a class="nav-links" href="#"><i class="fas fa-info"></i> About</a> -->
+        <a class="nav-links" href="#"><i class="fas fa-phone"></i> Contact</a>
+    </div>
+
+    <div class="carousel animated">
+        <h1 class="tag">Women Collection 2019</h1>
+        <h1 class="title">New Arrivals</h1>
+        <button class="btn">Shop Now</button>
+        <div class="switches">
+            <div class="switch active" onclick="changePic(1,this)"></div>
+            <div class="switch" onclick="changePic(2,this)"></div>
+            <div class="switch" onclick="changePic(3,this)"></div>
+            <div class="switch" onclick="changePic(4,this)"></div>
+        </div>
+    </div>
+
+    <div class="collection">
+        <h1>Our Collection</h1>
+        <div class="row">
+            <div class="col">
+                <div class="box box1">
+                    <button class="btn">Rings</button>
+                </div>
+                <div class="box box2">
+                    <button class="btn">Bracelets</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="box box3">
+                    <button class="btn">Bangles</button>
+                </div>
+                <div class="box box4">
+                    <button class="btn">Pearls</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="box box5">
+                    <button class="btn">Necklace</button>
+                </div>
+                <div class="box box6">
+                    <h1>Get Your Gifts</h1>
+                    <p>Select precious gifts for your loved ones from our online store and get the best benefits.</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature">
+        <h1>Featured Products</h1>
+        <div class="row">
+            <div class="col">
+                <div class="box" id="box1">
+                    <div class="img-holder">
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                    <div class="info">
+                        <h4>Elite Diamond</h4>
+                        <p>&#8377;48,504</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="box" id="box2">
+                    <div class="img-holder">
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                    <div class="info">
+                        <h4>Princely Necklace</h4>
+                        <p>&#8377;23,588</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="box" id="box3">
+                    <div class="img-holder">
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                    <div class="info">
+                        <h4>King's Ring</h4>
+                        <p>&#8377;16,897</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="box" id="box4">
+                    <div class="img-holder">
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                    <div class="info">
+                        <h4>Pearl Earrings</h4>
+                        <p>&#8377;61,789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="infograph">
+        <div class="row">
+            <div class="col">
+                <h2>Free Delivery</h2>
+                <p>Zero Charges</p>
+            </div>
+            <div class="col">
+                <h2>Store Opened</h2>
+                <p>11:00AM - 9:00PM</p>
+            </div>
+            <div class="col">
+                <h2>Get In Touch</h2>
+                <p><a href="#">Contact Us</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
