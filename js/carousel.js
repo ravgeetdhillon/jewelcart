@@ -1,10 +1,14 @@
-var carPics = ["","c1","c2","c3","c4"];
 function changePic(id, btn){
-    j = id;
-    var carousel = document.querySelector(".carousel");
-    carousel.style.backgroundImage = "linear-gradient(-45deg,rgba(249, 249, 134, 0.1),rgba(0, 0, 0, 0.9)), url('images/"+carPics[id]+".jpg')";
-    carousel.classList.remove("fadeIn");
-    carousel.classList.add("fadeIn");
+    var currCar = "";
+    for (i = 1; i < 5; i++){
+        currCar = document.getElementById("car-" + i);
+        currCar.classList.remove("slideInRight");
+        currCar.style.zIndex = "-2";
+    }
+    currCar = document.getElementById("car-" + id);
+    currCar.style.zIndex = "-1";
+    currCar.style.display = "block";
+    currCar.classList.add("slideInRight");
     var switches = document.querySelectorAll(".switches .switch");
     var i, s = switches.length;
     for (i = 0; i < s; i++){
@@ -13,30 +17,18 @@ function changePic(id, btn){
     btn.classList.add("active");
 }
 
-var flag = 0;
-function dropDownMenuControl() {
-	var dropDown = document.querySelector(".dropdown");
-	if (flag == 0){
-		dropDown.style.display = "flex";
-		dropDown.classList.remove("bounceOutUp");
-		dropDown.classList.add("bounceInDown");
-		flag = 1;
-	}
-	else{
-		dropDown.classList.remove("bounceInDown");
-		dropDown.classList.add("bounceOutUp");
-		setTimeout(
-			function(){
-			dropDown.style.display = "none";
-		}, 1000);
-		flag = 0;
-	}
-}
-
-let j = 1;
-var timer = setInterval(function(){
-    var carousel = document.querySelector(".carousel");
-    carousel.style.backgroundImage = "linear-gradient(-45deg,rgba(249, 249, 134, 0.1),rgba(0, 0, 0, 0.9)), url('images/"+carPics[j]+".jpg')";
+var j = 1;
+var currCar = "";
+setInterval(function(){
+    for (i = 1; i < 5; i++){
+        currCar = document.getElementById("car-" + i);
+        currCar.classList.remove("slideInRight");
+        currCar.style.zIndex = "-2";
+    }
+    currCar = document.getElementById("car-" + j);
+    currCar.style.zIndex = "-1";
+    currCar.style.display = "block";
+    currCar.classList.add("slideInRight");
     var switches = document.querySelectorAll(".switches .switch");
     var i, s = switches.length;
     for (i = 0; i < s; i++){
@@ -47,4 +39,4 @@ var timer = setInterval(function(){
     if (j > 4){
         j = 1;
     }
-}, 5000);
+}, 4000);

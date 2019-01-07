@@ -5,44 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Ravi Jewellers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, shrink-to-fit=no" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:Light|Raleway|Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:Light|Raleway|Poppins:Light">
     <link rel="stylesheet" type="text/css" href="./styles/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="./fontawesome/css/all.css" />
     <link rel="stylesheet" type="text/css" href="./styles/common.css" />
     <link rel="stylesheet" type="text/css" href="./styles/index.css" />
     <script src="./js/carousel.js"></script>
+    <script src="./js/app.js"></script>
 </head>
 <body>
+    <div id="goTopBtn" onclick="gotoTop()"><i class="fas fa-angle-up"></i></div>
     <div class="nav-bar">
         <div class="row">
             <div class="logo">
-                <h2>Ravi Jewellers</h2>
+                <img src="./images/logo.jpg" onclick="window.location='index.html';" />
             </div>
             <div class="menu">
-                <p><a href="#">Home</a></p>
+                <p><a href="index.html">Home</a></p>
                 <p><b><a href="#">Shop</a></b></p>
                 <p><a href="#">Collections</a></p>
                 <p><a href="#">About</a></p>
-                <p><a href="#">Contact</a></p>
+                <p><a href="contact.html">Contact</a></p>
             </div>
             <div class="options">
                 <i class="fas fa-bars" id="bars" onclick="dropDownMenuControl()"></i>
                 <i class="far fa-user-circle" id="user"></i>
-                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-shopping-bag"></i>
                 <span class="badge">2</span>
             </div>
         </div>
     </div>
 
     <div class="dropdown animated fast">
-        <a class="nav-links" href="#"><i class="fas fa-home"></i> Home</a>
+        <a class="nav-links" href="index.html"><i class="fas fa-home"></i> Home</a>
         <a class="nav-links" href="#"><i class="fas fa-shopping-bag"></i><b> Shop</b></a>
         <a class="nav-links" href="#"><i class="fas fa-image"></i> Collections</a>
-        <!-- <a class="nav-links" href="#"><i class="fas fa-info"></i> About</a> -->
-        <a class="nav-links" href="#"><i class="fas fa-phone"></i> Contact</a>
+        <a class="nav-links" href="#"><i class="fas fa-info"></i> About</a>
+        <a class="nav-links" href="contact.html"><i class="fas fa-phone"></i> Contact</a>
     </div>
 
-    <div class="carousel animated">
+    <div class="carousel">
+        <div id="car-1" class="car animated fast"></div>
+        <div id="car-2" class="car animated fast"></div>
+        <div id="car-3" class="car animated fast"></div>
+        <div id="car-4" class="car animated fast"></div>
         <h1 class="tag">Women Collection 2019</h1>
         <h1 class="title">New Arrivals</h1>
         <button class="btn">Shop Now</button>
@@ -55,30 +61,31 @@
     </div>
 
     <div class="collection">
-        <h1>Our Collection</h1>
+        <h1>Categories</h1>
+        <hr>
         <div class="row">
             <div class="col">
                 <div class="box box1">
-                    <button class="btn">Rings</button>
+                    <button class="btn">Bangles</button>
                 </div>
                 <div class="box box2">
-                    <button class="btn">Bracelets</button>
+                    <button class="btn">Chains</button>
                 </div>
             </div>
             <div class="col">
                 <div class="box box3">
-                    <button class="btn">Bangles</button>
+                    <button class="btn">Ear Rings</button>
                 </div>
                 <div class="box box4">
-                    <button class="btn">Pearls</button>
+                    <button class="btn">Jewellery Sets</button>
                 </div>
             </div>
             <div class="col">
                 <div class="box box5">
-                    <button class="btn">Necklace</button>
+                    <button class="btn">Necklaces</button>
                 </div>
                 <div class="box box6">
-                    <h1>Get Your Gifts</h1>
+                    <h2>Get Your Gifts</h2>
                     <p>Select precious gifts for your loved ones from our online store and get the best benefits.</p>
                     <button class="btn">Shop Now</button>
                 </div>
@@ -87,51 +94,70 @@
     </div>
 
     <div class="feature">
-        <h1>Featured Products</h1>
+        <h1>Loose Diamonds</h1>
+        <hr>
         <div class="row">
             <div class="col">
                 <div class="box" id="box1">
                     <div class="img-holder">
-                        <button class="btn">Add to Cart</button>
+                        <button class="btn">Quick View</button>
+                        <button class="btn"><i class="fas fa-cart-plus"></i></button>
                     </div>
                     <div class="info">
-                        <h4>Elite Diamond</h4>
-                        <p>&#8377;48,504</p>
+                        <h4>Crown</h4>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="box" id="box2">
                     <div class="img-holder">
-                        <button class="btn">Add to Cart</button>
+                        <button class="btn">Quick View</button>                         
+                        <button class="btn"><i class="fas fa-cart-plus"></i></button>
                     </div>
                     <div class="info">
-                        <h4>Princely Necklace</h4>
-                        <p>&#8377;23,588</p>
+                        <h4>Pear</h4>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="box" id="box3">
                     <div class="img-holder">
-                        <button class="btn">Add to Cart</button>
+                        <button class="btn">Quick View</button>                         
+                        <button class="btn"><i class="fas fa-cart-plus"></i></button>
                     </div>
                     <div class="info">
-                        <h4>King's Ring</h4>
-                        <p>&#8377;16,897</p>
+                        <h4>Emerald</h4>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="box" id="box4">
                     <div class="img-holder">
-                        <button class="btn">Add to Cart</button>
+                        <button class="btn">Quick View</button>                         
+                        <button class="btn"><i class="fas fa-cart-plus"></i></button>
                     </div>
                     <div class="info">
-                        <h4>Pearl Earrings</h4>
-                        <p>&#8377;61,789</p>
+                        <h4>Round</h4>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gender">
+        <h1>Shop by Gender</h1>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <img src="images/male.png" />
+                <h2 class="gen">Male</h2>
+            </div>
+            <div class="col">
+                <img src="images/female.png" />
+                <h2 class="gen">Female</h2>
+            </div>
+            <div class="col">
+                <h2>All</h2>
             </div>
         </div>
     </div>
@@ -139,8 +165,8 @@
     <div class="infograph">
         <div class="row">
             <div class="col">
-                <h2>Free Delivery</h2>
-                <p>Zero Charges</p>
+                <h2>Quality</h2>
+                <p>100% pure</p>
             </div>
             <div class="col">
                 <h2>Store Opened</h2>
@@ -153,5 +179,57 @@
         </div>
     </div>
 
+    <div class="footer">
+        <div class="row">
+            <div class="col">
+                <h3>Categories</h3>
+                <div class="sub">
+                    <div class="box">
+                        <p><a href="#">Nose Pins</a></p>
+                        <p><a href="#">Ear Rings</a></p>
+                        <p><a href="#">Mangalsutra</a></p>
+                        <p><a href="#">Loose Diamonds</a></p>
+                    </div>
+                    <div class="box">
+                        <p><a href="#">Chains</a></p>
+                        <p><a href="#">Pendants</a></p>
+                        <p><a href="#">Bangles</a></p>
+                        <p><a href="#">Finger Rings</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="nest">
+                    <h3>Collections</h3>
+                    <p><a href="#">Valentine</a></p>
+                    <p><a href="#">Anniversary</a></p>
+                    <p><a href="#">Wedding</a></p>
+                    <p><a href="#">Birthday</a></p>
+                </div>
+                <div class="nest">
+                    <h3>Contacts</h3>
+                    <p><i class="fas fa-at"></i> Email : abcdef@gmail.com</p>
+                    <p><i class="fab fa-whatsapp"></i> +919876543210</p>
+                    <p><i class="fas fa-phone"></i> +919998887776</p>
+                    <div class="social">
+                        <p><a href=""><i class="soc-icons fab fa-facebook-f"></i></a></p>
+                        <p><a href=""><i class="soc-icons fab fa-instagram"></i></a></p>
+                        <p><a href=""><i class="soc-icons fab fa-twitter"></i></a></p>
+                        <p><a href=""><i class="soc-icons fab fa-youtube"></i></a></p>
+                        <p><a href=""><i class="soc-icons fab fa-pinterest-p"></i></a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h3>Our Store</h3>
+                <p>Shop no.1,<br>Shri Durga Bhawan, Patel Chowk, Guru Bazar, Papraha Wala Bazar, Katra Ahluwalia,<br>Amritsar, Punjab 143006</p>
+                <a href="contact.html" id="store"><i class="fas fa-map-marker-alt"></i>&nbsp; Store Locator</a>
+            </div>
+        </div>
+        <div class="row">
+            <p>&copy; 2019 Ravi Jewellers</p>
+            <p>Developed By <a href="" id="developer">RavSam</a></p>
+        </div>
+    </div>
 </body>
 </html>
