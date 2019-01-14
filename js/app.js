@@ -1,25 +1,22 @@
-var flag = 0;
+// dropdown menu show or hide
 function dropDownMenuControl() {
 	var dropDown = document.querySelector(".dropdown");
-	if (flag == 0){
+	if (dropDown.style.display == "none"){
 		dropDown.style.display = "flex";
 		dropDown.classList.remove("bounceOutUp");
 		dropDown.classList.add("bounceInDown");
-		flag = 1;
 	}
-	else{
+	else if (dropDown.style.display == "flex"){
 		dropDown.classList.remove("bounceInDown");
 		dropDown.classList.add("bounceOutUp");
-		setTimeout(
-			function(){
+		setTimeout(function(){
 			dropDown.style.display = "none";
-		}, 1000);
-		flag = 0;
+		}, 800);
 	}
 }
 
 // navbar size
-function changeNavColor() {
+function changeNavSize() {
 	var logo = document.querySelector(".nav-bar img");
 	var dropDown = document.querySelector(".dropdown");
 	if (window.scrollY > 200) {
@@ -36,21 +33,52 @@ function changeNavColor() {
 	}
 }
 
-window.addEventListener("scroll", changeNavColor, false);
-
 //go to top button
 var goTopBtn = document.getElementById("goTopBtn");
 function gotoTopShoworHide(){
 	var goTopBtn = document.getElementById("goTopBtn");
-	if (window.scrollY < 500){
-		goTopBtn.style.display = "none";
+	if (window.pageYOffset < 500){
+		goTopBtn.classList.add("fadeOut");
+		setTimeout(function(){
+			goTopBtn.style.display = "none";
+		}, 100);
+		goTopBtn.classList.remove("fadeIn");
 	}
 	else{
 		goTopBtn.style.display = "flex";
+		goTopBtn.classList.add("fadeIn");
+		goTopBtn.classList.remove("fadeOut");
 	}
 }
 function gotoTop(){
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 }
+
+// hide menu on click on body area other than the menu
+document.addEventListener("mouseup", function(e){
+    var container = document.querySelector(".dropdown");
+    if (!container.contains(e.target)){
+        container.style.display = "none";
+    }
+}.bind(this));
+
+// show or hide cart list
+function showHideCartList(){
+    var cartlist = document.querySelector(".cart-list");
+    if (cartlist.style.display == ""){
+        cartlist.style.display = "flex";
+    }
+    else if (cartlist.style.display == "flex"){
+		cartlist.style.display = "";
+    }
+}
+
+window.addEventListener("scroll", changeNavSize, false);
 window.addEventListener("scroll", gotoTopShoworHide, false);
+
+// current year
+var date = new Date();
+var year = date.getFullYear();
+var copyright = document.querySelector("#copyright");
+copyright.innerHTML = "&copy; " + year + " Ravi Jewellers";

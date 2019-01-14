@@ -1,0 +1,38 @@
+.header-holder{
+    width: 100vw;
+    justify-content: center;
+}
+.header{
+    width: 90%;
+    border-bottom: 1px solid #dddddd;
+    border-radius: 0;
+    padding: 1.6rem;
+    align-items: baseline;
+}
+.header .title{
+    font-size: 5rem;
+}
+.header .action{
+    font-size: 2rem;
+    padding-left: 1.6rem;
+}
+.form-holder{
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4.8rem;
+}
+.form{
+    width: 90vw;
+    padding: 1.6rem;
+    border: 1px solid #dddddd;
+    flex-direction: column;
+}
+.form-row{
+    width: 50%;
+    max-width: 500px;
+    padding: 1.6rem;
+    align-items: baseline;
+    justify-content: stretch;
+    margin-bottom: 1.6rem;
+}

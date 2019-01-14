@@ -2,16 +2,20 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-transform: capitalize;
+    transition: 0.15s ease-in-out;
+    border-radius: 2px; /*change if doesn't work*/
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-size: 1.375em;
 }
 body{
     background: #ffffff;
     color: #212121;
     font-size: 16px;
     line-height: 1.3;
-    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
 }
 #goTopBtn{
@@ -54,7 +58,7 @@ body{
 .nav-bar .row{
     display: flex;
     width: 90vw;
-    max-width: 1400px;
+    max-width: 2400px;
     align-items: center;
 }
 .nav-bar .logo{
@@ -124,8 +128,8 @@ body{
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
+    cursor: pointer;
 }
-
 .dropdown{
     display: none;
     width: 100vw;
@@ -133,7 +137,7 @@ body{
     flex-direction: column;
     z-index: 50;
     padding-top: 64px;
-    background: rgba(242, 246, 247, 0.95);
+    background: rgba(255, 255, 255, 0.95);
     position: fixed;
     top: 0;
     box-shadow: 0px 0px 20px 1px rgba(33,33,33,0.5);
@@ -155,7 +159,7 @@ body{
 
 hr{
     width: 85vw;
-    max-width: 1400px;
+    max-width: 2400px;
     border: 1px solid #f9f986;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.01),0 2px 10px 0 rgba(0, 0, 0, 0.01);
     -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.01),0 2px 10px 0 rgba(0, 0, 0, 0.01);
@@ -174,19 +178,22 @@ hr{
     color: rgba(242, 246, 247, 0.5);
     font-size: 14px;
     flex-direction: column;
+    width: 100%;
+    border-radius: 0px;
 }
 .footer .row{
     display: flex;
     justify-content: center;
     align-items: stretch;
     width: 90vw;
-    max-width: 1400px;
+    max-width: 2400px;
     padding: 64px 0px;
 }
 .footer .row:last-child{
     padding: 0px;
     justify-content: space-evenly;
     background: #212121;
+    max-width: 100%;
     width: 100vw;
 }
 .footer .col{
@@ -276,7 +283,90 @@ hr{
 .footer .soc-icons:hover{
     color: rgba(232, 58, 127, 1);   
 }
-
+.cart-list{
+    position: fixed;
+    top: 44px;
+    right: 20px;
+    z-index: 101;
+    display: none;
+    justify-content: center;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 440px;
+    background: #ffffff;
+    overflow-y: auto;
+    max-height: 40vh;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.cart-list .row{
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 8px;
+}
+.cart-list .item{
+    display: flex;
+    flex-shrink: 0;
+    align-items: stretch;
+    width: 100%;
+    margin: 2px 0px;
+    padding: 16px 4px;
+    border-bottom: 1px solid rgba(33, 33, 33, 0.2);
+}
+.cart-list .item:last-child{
+    border-bottom: none;
+}
+.cart-list .img-holder{
+    display: flex;
+    width: 35%;
+    background: url("../images/bangle.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; 
+}
+.cart-list .info{
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+}
+.cart-list i{
+    float: right;
+    font-size: 18px;
+    cursor: pointer;
+}
+.cart-list i:hover{
+    color: red;
+}
+.cart-list p:nth-child(1){
+    padding-bottom: 4px;
+}
+.cart-list p:nth-child(2){
+    font-weight: bold;
+}
+.cart-list p:nth-child(4){
+    text-transform: lowercase;
+    background: #eeeeee;
+    width: 40px;
+    text-align: center;
+    padding: 2px 0px;
+}
+.cart-list .view-cart{
+    background: none;
+    outline: none;
+    padding: 8px 16px;
+    min-height: 40px;
+    margin: 16px auto;
+    border: 1px solid #e83a7f;
+    color:#e83a7f;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
 
 @media only screen and (min-width: 993px){
     .dropdown{
@@ -290,8 +380,7 @@ hr{
     }
     #goTopBtn{
         opacity: 1;
-        right: 20px;
-        bottom: 20px;
+        bottom: 50px;
     }
     .nav-bar .row{
         width: 100vw;
@@ -317,5 +406,15 @@ hr{
     }
     .footer .row:last-child{
         flex-direction: row;
+    }
+}
+@media only screen and (max-width: 600px){
+    .cart-list{
+        /* width: 100%; */
+        max-width: 90%;
+        right: 2vw;
+    }
+    .cart-list .img-holder{
+        background-size: 60%;
     }
 }

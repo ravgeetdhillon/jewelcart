@@ -12,7 +12,7 @@
 .header h1{
     font-size: 52px;
     text-transform: uppercase;
-    color: #f2f6f7;
+    color: #ffffff;
 }
 
 .contact-holder{
@@ -28,7 +28,7 @@
     justify-content: center;
     align-items: stretch;
     width: 90vw;
-    max-width: 1400px;
+    max-width: 2400px;
 }
 .contact-holder .map{
     display: flex;
@@ -112,7 +112,7 @@
     border-radius: 4px;
     transition: 0.2s ease-in-out;
     cursor: pointer;
-    color: #f2f6f7;
+    color: #ffffff;
     margin-bottom: 20px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.04), 0 2px 10px 0 rgba(0, 0, 0, 0.04);
     -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.04), 0 2px 10px 0 rgba(0, 0, 0, 0.04);

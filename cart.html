@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Ravi Jewellers</title>
+    <title>Cart - Ravi Jewellers</title>
     <link rel="icon" sizes="192x192" href="images/favilogo.png">
     <link rel="apple-touch-icon" href="images/favilogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, shrink-to-fit=no" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:Light|Arial|Poppins:Light|Raleway|Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica|Arial|Poppins|Ubuntu|Raleway|Montserrat">
     <link rel="stylesheet" type="text/css" href="./styles/w3.css">
     <link rel="stylesheet" type="text/css" href="./styles/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="./fontawesome/css/all.css" />
     <link rel="stylesheet" type="text/css" href="./styles/common.css" />
-    <link rel="stylesheet" type="text/css" href="./styles/index.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/cart.css" />
 </head>
 <body>
     <div id="goTopBtn" onclick="gotoTop();return false;" class="animated faster"><i class="fas fa-angle-up"></i></div>
@@ -78,138 +78,72 @@
         </div>
     </div>
 
-    <div class="carousel">
-        <div id="car-1" class="car animated fast"></div>
-        <div id="car-2" class="car animated fast"></div>
-        <div id="car-3" class="car animated fast"></div>
-        <div id="car-4" class="car animated fast"></div>
-        <h1 class="tag">Women Collection 2019</h1>
-        <h1 class="title">New Arrivals</h1>
-        <button class="btn" onclick="window.location.href = 'shop.html';return false;">Shop Now</button>
-        <div class="switches">
-            <div class="switch active" onclick="changePic(1,this);return false;"></div>
-            <div class="switch" onclick="changePic(2,this);return false;"></div>
-            <div class="switch" onclick="changePic(3,this);return false;"></div>
-            <div class="switch" onclick="changePic(4,this);return false;"></div>
+    <div class="cart-holder">
+        <div class="head-row">
+            <p></p>
+            <p>Product Type</p>
+            <p>Product ID</p>
+            <p>Quantity</p>
+            <p></p>
         </div>
-    </div>
-
-    <div class="collection">
-        <h1>Categories</h1>
-        <hr>
-        <div class="row">
-            <div class="col">
-                <div class="box box1">
-                    <button class="btn">Bangles</button>
+        <div class="product-row">
+            <div class="product" id="pro1">
+                <div class="img-holder"></div>
+                <div class="sub">
+                    <p class="type">Ring</p>
+                    <p class="id">h33ugff989</p>
                 </div>
-                <div class="box box2">
-                    <button class="btn">Chains</button>
-                </div>
-            </div>
-            <div class="col">
-                <div class="box box3">
-                    <button class="btn">Ear Rings</button>
-                </div>
-                <div class="box box4">
-                    <button class="btn">Jewellery Sets</button>
-                </div>
-            </div>
-            <div class="col">
-                <div class="box box5">
-                    <button class="btn">Necklaces</button>
-                </div>
-                <div class="box box6">
-                    <h2>Festive Variety</h2>
-                    <p>Select precious gifts for your loved ones from our online store.</p>
-                    <button class="btn" onclick="window.location.href = 'shop.html';return false;">Shop Now</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="feature">
-        <h1>Loose Diamonds</h1>
-        <hr>
-        <div class="row">
-            <div class="col">
-                <div class="box" id="box1" onclick="window.location.href = 'shop.html';return false;">
-                    <div class="img-holder">
-                        <button class="btn" onclick="window.location.href = 'shop.html';return false;">View More</button>
-                        <button class="btn"><i class="fas fa-cart-plus"></i></button>
+                <div class="sub">
+                    <div class="quantity-holder">
+                        <div class="quantity">
+                            <button id="qtnMin">-</button>
+                            <p id="qtn">1</p>
+                            <button id="qtnPlus">+</button>
+                        </div>
                     </div>
-                    <div class="info">
-                        <h4>Crown</h4>
+                    <div class="remove">
+                        <p><i class="far fa-trash-alt"></i> Remove</p>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="box" id="box2" onclick="window.location.href = 'shop.html';return false;">
-                    <div class="img-holder">
-                        <button class="btn" onclick="window.location.href = 'shop.html';return false;">View More</button>                         
-                        <button class="btn"><i class="fas fa-cart-plus"></i></button>
-                    </div>
-                    <div class="info">
-                        <h4>Pear</h4>
-                    </div>
+            <div class="product" id="pro2">
+                <div class="img-holder"></div>
+                <div class="sub">
+                    <p class="type">Ring</p>
+                    <p class="id">h33ugff989</p>
                 </div>
-            </div>
-            <div class="col">
-                <div class="box" id="box3" onclick="window.location.href = 'shop.html';return false;">
-                    <div class="img-holder">
-                        <button class="btn" onclick="window.location.href = 'shop.html';return false;">View More</button>                         
-                        <button class="btn"><i class="fas fa-cart-plus"></i></button>
+                <div class="sub">
+                    <div class="quantity-holder">
+                        <div class="quantity">
+                            <button id="qtnMin">-</button>
+                            <p id="qtn">1</p>
+                            <button id="qtnPlus">+</button>
+                        </div>
                     </div>
-                    <div class="info">
-                        <h4>Emerald</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="box" id="box4" onclick="window.location.href = 'shop.html';return false;">
-                    <div class="img-holder">
-                        <button class="btn" onclick="window.location.href = 'shop.html';return false;">View More</button>                         
-                        <button class="btn"><i class="fas fa-cart-plus"></i></button>
-                    </div>
-                    <div class="info">
-                        <h4>Round</h4>
+                    <div class="remove">
+                        <p><i class="far fa-trash-alt"></i> Remove</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="gender">
-        <h1>Shop by Gender</h1>
-        <hr>
-        <div class="row">
-            <div class="col" onclick="window.location.href = 'shop.html';return false;">
-                <img src="images/male.png" />
-                <h2 class="gen">Male</h2>
+        
+        <div class="summary">
+            <h2>Order Summary</h2>
+            <br />
+            <div>
+                <p class="title">Total Items</p>
+                <p>3</p>
             </div>
-            <div class="col" onclick="window.location.href = 'shop.html';return false;">
-                <img src="images/female.png" />
-                <h2 class="gen">Female</h2>
+            <div>
+                <p class="title">Total Quantity</p>
+                <p>27</p>
             </div>
-            <div class="col" onclick="window.location.href = 'shop.html';return false;">
-                <h2>All</h2>
+            <div>
+                <p class="title">Order By</p>
+                <p class="address">Ram Pilas Sharma</p>
             </div>
-        </div>
-    </div>
-
-    <div class="infograph">
-        <div class="row">
-            <div class="col">
-                <h2>Quality</h2>
-                <p>100% pure</p>
-            </div>
-            <div class="col">
-                <h2>Store Opened</h2>
-                <p>11:00AM - 9:00PM</p>
-            </div>
-            <div class="col">
-                <h2>Get In Touch</h2>
-                <p><a href="contact.html">Contact Us</a></p>
-            </div>
+            <br />
+            <button>Place an Order</button>
         </div>
     </div>
 
@@ -265,8 +199,8 @@
             <p>Developed By <a href="" id="developer">RavSam</a></p>
         </div>
     </div>
-    
-    <script src="./js/carousel.js"></script>
-    <script src="./js/app.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 </html>

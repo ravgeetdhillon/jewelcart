@@ -1,14 +1,11 @@
 .carousel{
     width: 100vw;
     height: 100vh;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #ffffff;
+    color: #ffffff; 
 }
 .carousel .car{
     position: absolute;
@@ -21,25 +18,24 @@
 .carousel #car-1{
     width: 100%;
     height: 100%;
-    background: linear-gradient(-45deg,rgba(249, 249, 134, 0.1),rgba(0, 0, 0, 0.9)), url("../images/bn1.jpg");
-    /* display: none; */
+    background: linear-gradient(-45deg,rgba(249, 249, 134, 0.1),rgba(0, 0, 0, 0.9)), url("../images/bn6.jpg");
 }
 .carousel #car-2{
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(-45deg,rgba(249, 249, 134, 0.1),rgba(0, 0, 0, 0.9)), url("../images/bn3.jpg");
-    display: none;
-}
-.carousel #car-3{
     width: 100%;
     height: 100%;
     background: linear-gradient(-45deg,rgba(249, 249, 134, 0.1),rgba(0, 0, 0, 0.9)), url("../images/bn2.jpg");
     display: none;
 }
+.carousel #car-3{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg,rgba(249, 249, 134, 0.1),rgba(0, 0, 0, 0.9)), url("../images/bn3.jpg");
+    display: none;
+}
 .carousel #car-4{
     width: 100%;
     height: 100%;
-    background: linear-gradient(-45deg,rgba(249, 249, 134, 0.1),rgba(0, 0, 0, 0.9)), url("../images/bn6.jpg");
+    background: linear-gradient(-45deg,rgba(249, 249, 134, 0.1),rgba(0, 0, 0, 0.9)), url("../images/bn4.jpg");
     display: none;
 }
 .carousel img{
@@ -115,12 +111,12 @@
 .collection .row{
     display: flex;
     width: 90vw;
-    max-width: 1400px;
+    max-width: 2400px;
 }
 .collection .col{
     display: flex;
     flex-direction: column;
-    flex: 1;
+    width: calc(100%/3);
     justify-content: center;
     height: 920px;
     padding: 16px;
@@ -226,7 +222,7 @@
 .feature .row{
     display: flex;
     width: 90vw;
-    max-width: 1400px;
+    max-width: 2400px;
     align-items: stretch;
     padding: 16px;
 }
@@ -299,7 +295,6 @@
     outline: none;
     padding: 4px 8px;
     font-family: 'Poppins', sans-serif;
-    border-radius: 4px;
     transition: 0.15s ease-in-out;
     cursor: pointer;
     color: #ffffff;
@@ -333,7 +328,7 @@
     display: flex;
     align-items: stretch;
     width: 90vw;
-    max-width: 1400px;
+    max-width: 2400px;
     padding: 32px 0px;
 }
 .gender .col{
@@ -342,13 +337,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 1px;
-    margin: 0px 32px;
-    transition: 0.15s ease-in-out;
-    padding: 32px;
+    margin: 0px 8px;
+    padding: 32px 16px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.08), 0 2px 10px 0 rgba(0, 0, 0, 0.04);
-    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.08), 0 2px 10px 0 rgba(0, 0, 0, 0.06);
-    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.08), 0 2px 10px 0 rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.08), 0 2px 10px 0 rgba(0, 0, 0, 0.04);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.08), 0 2px 10px 0 rgba(0, 0, 0, 0.04);
     cursor: pointer;
 }
 .gender .col:nth-child(1){
@@ -364,10 +357,10 @@
     transform: scale(1.05);
 }
 .gender .col:hover .gen{
-    display: initial;
+    visibility: visible;
 }
 .gender .col:hover img{
-    display: none;
+    visibility: hidden;
 }
 .gender h1{
     font-size: 40px;
@@ -378,34 +371,34 @@
 .gender img{
     max-width: 256px;
     max-height: 256px;
-    max-width: 256px;
-    max-height: 256px;
     width: 40%;
-    height: 100%;
-    opacity: 1;
+    height: auto;
+    transition: visibility 0s;
 }
 .gender h2{
-    font-size: 40px;
+    font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #ffffff;
+    position: absolute;
 }
 .gender .gen{
-    display: none;
+    visibility: hidden;
+    transition: visibility 0s;
 }
 
 .infograph{
     margin-top: 60px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     background: rgba(33, 33, 33, 0.045);
     padding: 16px;
 }
 .infograph .row{
     display: flex;
     width: 90vw;
-    max-width: 1400px;
+    max-width: 2400px;
     align-items: stretch;
 }
 .infograph .col{
@@ -431,24 +424,32 @@
     transition: 0.15s ease-in-out;
 }
 
-
-
-@media only screen and (max-width:768px){
+@media only screen and (min-width: 993px){
     .carousel .title{
-        font-size: 40px;
+        font-size: 3rem;
     }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px){
     .collection .row{
         width: 100vw;
         flex-direction: column;
     }
     .collection .col{
         width: 100%;
+        flex-direction: row;
+        align-items: stretch;
         height: auto;
         margin: 0;
         padding: 0px 16px;
     }
     .collection .box{
+        margin: 16px 4px;
         height: 300px;
+        background-size: 50% !important;
+    }
+    .collection .box6{
+        padding: 32px;
     }
     .collection h1{
         font-size: 28px;
@@ -483,6 +484,52 @@
     .infograph .col:last-child{
         border-bottom: none;
     }
+}
+
+@media only screen and (max-width: 600px){
+    .carousel .title{
+        font-size: 40px;
+    }
+    .collection .row{
+        width: 100vw;
+        flex-direction: column;
+    }
+    .collection .col{
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        margin: 0;
+        padding: 0px 16px;
+    }
+    .collection .box{
+        height: 300px;
+        background-size: 50% !important;
+    }
+    .collection h1{
+        font-size: 28px;
+    }
+    .feature .row{
+        width: 90vw;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 16px;
+    }
+    .feature .col{
+        padding: 8px;
+    }
+    .feature .col:first-child{
+        padding-left: none;
+    }
+    .feature .box{
+        width: 250px !important;
+        height: 250px;
+    }
+    .feature h1{
+        font-size: 28px;
+    }
+    .feature .img-holder{
+        border: 1px solid rgba(33, 33, 33, 0.4);
+    }
     .gender .row{
         width: 100vw;
         flex-direction: column;
@@ -494,5 +541,21 @@
     }
     .gender h1{
         font-size: 28px;
+    }
+    .gender img{
+        width: 40% !important;
+        opacity: 1;
+    }
+    .infograph .row{
+        width: 100vw;
+        flex-direction: column;
+    }
+    .infograph .col{
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid rgba(33, 33, 33, 0.2);
+    }
+    .infograph .col:last-child{
+        border-bottom: none;
     }
 }
